@@ -18,10 +18,10 @@ function inputValue() {
     if (!gameOperations.gameOverFlag) {
         var currentButtonValue = this.innerText;
         // console.log(currentButtonValue);
-        gameOperations.zeroCrossFlag ? document.querySelector('#chanceIndicator').innerText = '0' : document.querySelector('#chanceIndicator').innerText = 'X';
+        
         if (!this.innerText) {
             gameOperations.zeroCrossFlag ? this.innerText = 'X' : this.innerText = 'O';
-            
+            gameOperations.zeroCrossFlag ? document.querySelector('#chanceIndicator').innerText = '0' : document.querySelector('#chanceIndicator').innerText = 'X';
             gameOperations.toggleZeroCross();
         }
         checkWins();
