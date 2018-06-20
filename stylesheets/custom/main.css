@@ -1,14 +1,19 @@
-.inputButtons{
+.inputButtons {
     height: 70px;
     width: 70px;
     margin: 10px;
-    border: 1px black solid;
     size: 20px 20px;
     font-size: 40px;
 }
-.inputButtons:hover{
+
+.buttonBorder {
     border: 1px black solid;
 }
-nav h1{
+
+.inputButtons:hover {
+    border: 1px black solid;
+}
+
+nav h1 {
     color: white;
 }
