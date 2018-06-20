@@ -11,14 +11,17 @@ function bindEvents() {
         button.addEventListener('click', inputValue);
     });
     document.querySelector("#clearButton").addEventListener('click', clear);
+    gameOperations.zeroCrossFlag ? document.querySelector('#chanceIndicator').innerText = 'X' : document.querySelector('#chanceIndicator').innerText = 'O';
 }
 
 function inputValue() {
     if (!gameOperations.gameOverFlag) {
         var currentButtonValue = this.innerText;
         // console.log(currentButtonValue);
+        gameOperations.zeroCrossFlag ? document.querySelector('#chanceIndicator').innerText = '0' : document.querySelector('#chanceIndicator').innerText = 'X';
         if (!this.innerText) {
             gameOperations.zeroCrossFlag ? this.innerText = 'X' : this.innerText = 'O';
+            
             gameOperations.toggleZeroCross();
         }
         checkWins();
